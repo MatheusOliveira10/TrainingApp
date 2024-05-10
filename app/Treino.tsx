@@ -57,15 +57,15 @@ export default function Treino() {
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 30 }}>
                             <View style={styles.props}>
                                 <Ionicons size={28} name={'refresh-circle'} color='white' />
-                                <ThemedText>{exercise.repetitions}</ThemedText>
+                                <ThemedText style={styles.seriesAttributes} >{exercise.repetitions}</ThemedText>
                             </View>
                             <View style={styles.props}>
                                 <Ionicons size={28} name={'time'} color='white' />
-                                <ThemedText>{exercise.intervalTime}</ThemedText>
+                                <ThemedText style={styles.seriesAttributes} >{exercise.intervalTime}</ThemedText>
                             </View>
                             <View style={styles.props}>
                                 <Ionicons size={28} name={'home'} color='white' />
-                                <ThemedText>{exercise.seriesCount}</ThemedText>
+                                <ThemedText style={styles.seriesAttributes} >{exercise.seriesCount}</ThemedText>
                             </View>
                             <View style={styles.props}>
                                 <FontAwesome6 name="dumbbell" size={26} color="white" />
@@ -75,7 +75,7 @@ export default function Treino() {
 
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 10 }}>
                             <View style={styles.cronometerContainer}>
-                                <Ionicons size={28} name={'time'} color='blue' />
+                                <Ionicons size={28} name={'time'} color='white' />
                                 <ThemedText>1:00</ThemedText>
                                 <TouchableOpacity>
                                     <Ionicons size={28} name={'play'} color='green' />
@@ -117,8 +117,15 @@ const styles = StyleSheet.create({
     },
     weightInput: {
         backgroundColor: 'white',
-        padding: 10,
+        padding: 5,
         borderRadius: 10,
-        textAlign: 'center'
+        textAlign: 'center',
+        marginTop: 1
+    },
+    seriesAttributes: {
+        padding: 5,
+        borderRadius: 10,
+        textAlign: 'center',
+        marginTop: 5
     }
 })

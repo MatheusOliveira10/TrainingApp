@@ -25,6 +25,7 @@ export default function Index() {
         padding: 10,
         gap: 10
       }}
+      mustBeSafeArea={true}
     >
       {
         trainingSessions.map(session => <TouchableOpacity key={session.title} onPress={() => router.push('Treino')}>
